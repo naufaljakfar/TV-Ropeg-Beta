@@ -1,32 +1,64 @@
-const displayTime = document.querySelector(".display-time");
-// Time
-function showTime() {
-  let time = new Date();
-  displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
-  setTimeout(showTime, 1000);
-}
+// const getCurrentTimeDate = () => {
+//   let currentTimeDate = new Date();
 
-showTime();
+//   var weekday = new Array(7);
+//   weekday[0] = "SUN";
+//   weekday[1] = "MON";
+//   weekday[2] = "TUE";
+//   weekday[3] = "WED";
+//   weekday[4] = "THU";
+//   weekday[5] = "FRI";
+//   weekday[6] = "SAT";
 
-// Date
-function updateDate() {
-  let today = new Date();
+//   var month = new Array();
+//   month[0] = "JAN";
+//   month[1] = "FEB";
+//   month[2] = "MAR";
+//   month[3] = "APR";
+//   month[4] = "May";
+//   month[5] = "JUN";
+//   month[6] = "JUL";
+//   month[7] = "AUG";
+//   month[8] = "SEP";
+//   month[9] = "OCT";
+//   month[10] = "NOV";
+//   month[11] = "DEC";
 
-  // return number
-  let dayName = today.getDay(),
-    dayNum = today.getDate(),
-    month = today.getMonth(),
-    year = today.getFullYear();
+//   var hours = currentTimeDate.getHours();
+//   var minutes = currentTimeDate.getMinutes();
+//   minutes = minutes < 10 ? "0" + minutes : minutes;
 
-  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  const dayWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  // value -> ID of the html element
-  const IDCollection = ["day", "daynum", "month", "year"];
-  // return value array with number as a index
-  const val = [dayWeek[dayName], dayNum, months[month], year];
-  for (let i = 0; i < IDCollection.length; i++) {
-    document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
-  }
-}
+//   if (minutes < 10) {
+//     minutes = "0" + minutes;
+//   } else {
+//     minutes = minutes;
+//   }
 
-updateDate();
+//   var AMPM = hours >= 12 ? "PM" : "AM";
+
+//   if (hours === 12) {
+//     hours = 12;
+//   } else {
+//     hours = hours % 12;
+//   }
+
+//   var currentTime = `${hours}:${minutes}${AMPM}`;
+
+//   var currentDay = weekday[currentTimeDate.getDay()];
+
+//   var currentDate = currentTimeDate.getDate();
+
+//   var currentMonth = month[currentTimeDate.getMonth()];
+
+//   var CurrentYear = currentTimeDate.getFullYear();
+
+//   var fullDate = `${currentDate} ${currentMonth} ${CurrentYear}`;
+
+//   document.getElementById("time").innerHTML = currentTime;
+
+//   document.getElementById("day").innerHTML = currentDay;
+
+//   document.getElementById("date").innerHTML = fullDate;
+
+//   setTimeout(getCurrentTimeDate, 500);
+// };

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 .tb-agenda {
   height: 100px;
 }
@@ -337,3 +339,30 @@ Label the data
   opacity: 0.8;
 }
 
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-wrapper th,
+  .table-wrapper td {
+    padding: 5px;
+    text-align: left;
+  }
+  
+  @media (max-width: 600px) {
+    .table-wrapper {
+      overflow-x: scroll;
+    }
+  }
+  
+  .tgl{
+    text-align: right;
+  }
+  
+  
