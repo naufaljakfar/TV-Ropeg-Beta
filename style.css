@@ -103,8 +103,8 @@ tr:nth-of-type(odd) {
   background: #eee;
 }
 th {
-  background: #063a69;
-  color: white;
+  background-color: #063a69;
+  color: black;
   font-weight: bold;
   font-family: "Calibri";
   font-size: 20px;
@@ -181,7 +181,6 @@ th {
 
   /* Force table to not be like tables anymore */
   table,
-  thead,
   tbody,
   th,
   td,
@@ -224,13 +223,10 @@ th {
     border: solid 2px #ddd;
   }
   /* Hide table headers (but not display: none;, for accessibility) */
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
+
 
   tr {
+    background-color: #063a69;
     border: 1px solid #1b1a1a;
   }
 
